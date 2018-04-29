@@ -22,7 +22,6 @@ let product = require('./models/careyProducts')
 app.get('/products', (req, res) => {
   product.find({}, (err, data) => {
     res.send(data)
-    console.log(data)
   })
 })
 
