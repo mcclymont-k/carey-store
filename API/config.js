@@ -1,3 +1,3 @@
 const keys = {
-  SQUARE_ACCESS_TOKEN : 'sq0atp-vL4Vqurp1uFH-Kbw9UHLbQ'
+  SQUARE_ACCESS_TOKEN : 'sq0atp-6ncZHQ3X1IfUEbGvOkfNXg'
 }

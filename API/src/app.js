@@ -6,14 +6,14 @@ const SquareConnect = require('square-connect');
 const defaultClient = SquareConnect.ApiClient.instance;
 
 oauth2 = defaultClient.authentications.oauth2;
-oauth2.accessToken = HEROKU_LOCATION_ACCESS_TOKEN
+oauth2.accessToken = SECRETY_SECRET
 
-const locationsApi = new SquareConnect.LocationsApi();
+const catalogApi = new SquareConnect.CatalogApi();
 // Make an API call to the listLocations endpoint
-locationsApi.listLocations()
+catalogApi.listCatalog()
   .then((response) => {
-    console.log(locationsApi.listLocations());
+    console.log(catalogApi.listCatalog());
     console.log('API called successfully, returned data: ' +
-    response);
-    console.log(response)
+    response.itemData);
+    console.log(response.objects[0].itemData)
   });
