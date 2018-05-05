@@ -6,7 +6,7 @@ const SquareConnect = require('square-connect');
 const defaultClient = SquareConnect.ApiClient.instance;
 
 oauth2 = defaultClient.authentications.oauth2;
-oauth2.accessToken = SECRETY_SECRET
+oauth2.accessToken = 'sq0atp-iQMA4lFkwz1sy0-b2efDeg'
 
 const catalogApi = new SquareConnect.CatalogApi();
 // Make an API call to the listLocations endpoint
