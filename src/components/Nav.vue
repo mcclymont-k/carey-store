@@ -1,6 +1,5 @@
 <template>
   <nav id="nav">
-    <img src='../assets/cd_2017_WebClipIcon.png' />
     <ul>
       <li>
         <router-link to="about" exact>About</router-link>
@@ -10,6 +9,11 @@
       </li>
       <li>
         <a v-on:click="handleClick()">Contact</a>
+      </li>
+    </ul>
+    <ul class='right'>
+      <li>
+        <i class="fas fa-shopping-cart"></i>
       </li>
     </ul>
   </nav>

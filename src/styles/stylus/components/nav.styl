@@ -1,0 +1,33 @@
+// Styling for Nav bar
+@import '../variables.styl'
+
+nav
+  display grid
+  grid-template-columns 1fr 1fr
+  font-family Muli
+  margin-top 1rem
+  ul
+    display flex
+    flex-direction row
+    align-items baseline
+    img
+      height 2rem
+      width auto
+      padding 0 1rem
+
+    li
+      font-size 1rem
+      padding 0 1rem
+      list-style none
+      a
+        color gray-font
+        text-decoration none
+        line-height 0.2rem
+      i
+        color gray-font
+        font-size 1.2rem
+        float right
+
+  .right
+    display inline-block
+    margin-right 1rem

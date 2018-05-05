@@ -12,6 +12,7 @@ import Nav from '@/components/Nav'
 
 export default {
   name: 'App',
+  components: {Nav},
   created() {
     axios.get('http://localhost:5000/products')
       .then(response => console.log(response))
