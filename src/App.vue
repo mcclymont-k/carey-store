@@ -6,7 +6,14 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    axios.get('http://localhost:5000/products')
+      .then(response => console.log(response))
+      }
 }
 </script>
