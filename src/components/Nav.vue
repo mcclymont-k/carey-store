@@ -1,12 +1,12 @@
 <template>
-  <nav id="navbar">
+  <nav id="nav">
     <img src='../assets/cd_2017_WebClipIcon.png' />
     <ul>
       <li>
-        <router-link :to="/about">{{ route.name }}</router-link>
+        <router-link to="about" exact>About</router-link>
       </li>
       <li>
-        <router-link :to="/events">{{ route.name }}</router-link>
+        <router-link to="events" exact>Events</router-link>
       </li>
       <li>
         <a v-on:click="handleClick()">Contact</a>
@@ -18,19 +18,15 @@
 <script>
 import { mapState } from 'vuex'
 import ContactModal from '@/components/ContactModal'
+import router from '../router'
 
 export default {
-  name: 'Navbar',
-  components: { ContactModal },
-  data () {
-    return {
-      msg: "Welcome to the nav!"
-    }
-  },
+  name: 'Nav',
+  computed: mapState([
+    'contactModalOpen'
+  ]),
 
-  computed: {
-    ...mapState('contactModalOpen')
-  },
+  components: { ContactModal },
 
   methods: {
     handleClick () {

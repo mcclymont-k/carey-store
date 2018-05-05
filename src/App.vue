@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Nav />
     <router-view/>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Navbar from '@/components/Navbar'
+import router from './router'
+import Nav from '@/components/Nav'
 
 export default {
   name: 'App',
@@ -17,3 +18,7 @@ export default {
       }
 }
 </script>
+
+<style lang="css">
+   @import './styles/stylus/index.css'
+</style>

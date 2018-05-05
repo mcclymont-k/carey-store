@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <transition name='fade'>
-      <img src='../assets/SelfPortrait-01.png' / />
+      <img src='../assets/SelfPortrait-01.png' />
     </transition>
     {{ msg }}
   </div>
