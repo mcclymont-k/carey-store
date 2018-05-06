@@ -9,8 +9,11 @@ const cors = require('cors')
 app = express();
 app.use(serveStatic(__dirname + "/dist"));
 let catalogData = {}
+let categoryList = {}
 
 app.get('/products', (req, res) => res.send(catalogData))
+app.get('/categoryList', (req, res) => res.send(categoryList))
+
 
 request('https://connect.squareup.com/v2/catalog/list',
   {'auth': {
@@ -18,6 +21,17 @@ request('https://connect.squareup.com/v2/catalog/list',
   }}, function(error, response, body){
     catalogData = JSON.parse(body)
   })
+
+  app.get('/products', (req, res) => res.send(catalogData))
+
+request('https://connect.squareup.com/v2/catalog/list',
+  {'auth': {
+    'bearer': process.env.SQUARE_UP_ACCESS_TOKEN
+  }}, function(error, response, body){
+    catalogData = JSON.parse(body)
+    categoryList = catalogData.objects.filter(object => object.type == "CATEGORY")
+  })
+
 
 
 var port = process.env.PORT || 5000;

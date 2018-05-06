@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import About from '@/components/About'
 import Events from '@/components/Events'
 import Home from '@/components/Home'
-import ProductCategories from '@/components/ProductCategories'
+import ProductList from '@/components/ProductList'
 
 Vue.use(Router)
 
@@ -26,8 +27,8 @@ export default new Router({
     },
     {
       path: '/product_categories/:id',
-      name: 'ProductCategories',
-      component: ProductCategories
+      name: 'ProductList',
+      component: ProductList
     }
   ]
 })
