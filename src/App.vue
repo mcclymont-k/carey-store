@@ -2,21 +2,19 @@
   <div id="app">
     <Nav />
     <router-view/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import router from './router'
+import Footer from '@/components/Footer'
 import Nav from '@/components/Nav'
 
 export default {
   name: 'App',
-  components: {Nav},
-  created() {
-    axios.get('http://localhost:5000/products')
-      .then(response => console.log(response))
-      }
+  components: {Nav, Footer}
 }
 </script>
 
