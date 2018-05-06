@@ -1,28 +1,28 @@
 <template>
   <div id="product-categories">
     <div class='wrapper'>
-      {{ categories }}
+      <div v-for="category in categories">
+          <router-link :to="{ name: 'ProductList', params: { id: category.id }}">
+            {{ category.category_data.name }}
+          </router-link>
+      </div>
+      <div>
+        <router-link to='/product_categories/view_all'>View All</router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'ProductCategories',
-  computed: mapState(['productCategories']),
-
-  data () {
-    return {
-      msg: 'Here are the categories',
-      categories: []
-    }
-  },
+  computed: mapGetters({categories: 'productCategories'}),
 
   mounted () {
     this.$store.dispatch('LOAD_PRODUCT_CATEGORIES')
-    console.log(this.$store.state.squareUp)
+    console.log(this.categories)
   }
 }
 </script>

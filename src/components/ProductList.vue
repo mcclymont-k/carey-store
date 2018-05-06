@@ -1,16 +1,29 @@
 <template>
   <div id="product-list">
-    {{ msg }}
+    <div class='wrapper'>
+      <h2>{{ categoryId }}</h2>
+      <div v-for="product in products">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'ProductModal',
+  name: 'ProductList',
+  computed: mapGetters({products: 'products'}),
+
   data () {
     return {
-      msg: 'Here are the products by category'
+      categoryId: this.$route.params.id
     }
+  },
+
+  mounted () {
+    this.$store.dispatch('LOAD_PRODUCTS')
+    console.log(this.products)
   }
 }
 </script>
