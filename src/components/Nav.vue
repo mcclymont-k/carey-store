@@ -2,6 +2,9 @@
   <nav id="nav">
     <ul>
       <li>
+        <router-link to="home" exact>Home</router-link>
+      </li>
+      <li>
         <router-link to="about" exact>About</router-link>
       </li>
       <li>
