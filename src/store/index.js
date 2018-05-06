@@ -4,9 +4,10 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-let usersAPI = 'http://localhost:8081/users'
+let usersAPI = 'http://localhost:5000/products'
 
 const state = {
+  contactModalOpen: false,
   products: []
 }
 
@@ -21,23 +22,22 @@ const actions = {
 }
 
 const mutations = {
-  SET_PRODUCTS: (state, { products }) => {
-    state.products = products
+  OPEN_CONTACT_MODAL: (state) => {
+    state.contactModalOpen = true
   },
 
-  ADD_PRODUCT: (state, newProduct) => {
-    state.products.push({
-      'id': newProduct.id,
-      'title': newProduct.title,
-      'price': newProduct.price,
-      'description': newProduct.description,
-      'image': newProduct.image
-    })
+  CLOSE_CONTACT_MODAL: (state) => {
+    state.contactModalOpen = false
+  },
+
+  SET_PRODUCTS: (state, { products }) => {
+    state.products = { products }
   }
 
 }
 
 const getters = {
+  contactModalOpen: state => state.contactModalOpen,
   products: state => state.products
 }
 

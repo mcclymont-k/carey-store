@@ -1,15 +1,15 @@
 <template>
-  <div id="about">
+  <div id="product-modal">
     {{ msg }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'ProductModal',
   data () {
     return {
-      msg: 'Welcome to Your About Page'
+      msg: 'Welcome to Your Product Page'
     }
   }
 }
