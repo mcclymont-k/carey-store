@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-let usersAPI = 'http://localhost:5000/products'
+let usersAPI = 'http://localhost:5000/items'
 let categoryAPI = 'http://localhost:5000/categoryList'
 
 const state = {

@@ -3,15 +3,15 @@
     <transition name='fade'>
       <img v-if="show" src='../assets/SelfPortrait-01.png' />
     </transition>
-    <ProductCategories />
+    <div>
+      <router-link to='/product_categories/view_all' exact>View Collection</router-link>
+    </div>
   </div>
 </template>
 
 <script>
-import ProductCategories from './ProductCategories'
 export default {
   name: 'Home',
-  components: { ProductCategories },
   data () {
     return {
       show: false,
