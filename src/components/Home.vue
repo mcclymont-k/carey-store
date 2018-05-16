@@ -4,7 +4,7 @@
       <img v-if="show" src='../assets/SelfPortrait-01.png' />
     </transition>
     <div>
-      <router-link to='/product_categories/view_all' exact>View Collection</router-link>
+      <router-link to='/product_categories' exact>View Collection</router-link>
     </div>
   </div>
 </template>

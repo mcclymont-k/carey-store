@@ -26,7 +26,7 @@ export default new Router({
       component: Events
     },
     {
-      path: '/product_categories/:id',
+      path: '/product_categories',
       name: 'ProductList',
       component: ProductList
     }
