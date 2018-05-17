@@ -1,0 +1,32 @@
+// Styling for Product list
+@import '../variables.styl'
+
+#product-list
+  display grid
+  grid-template-columns 200px auto
+  font-family Muli
+  color gray-font
+  .fade-enter-active, .fade-leave-active
+    transition opacity 2s
+  .fade-enter, .fade-leave-to
+    opacity 0
+
+#sidebar
+  ul li a
+    text-decoration none
+    list-style none
+    cursor pointer
+    :hover
+      color dark-green
+
+.product-list-wrapper
+  display grid
+  grid-template-columns 1fr 1fr 1fr
+  grid-auto-rows auto
+
+.product-box
+  border solid darker-green 2px
+  text-align center
+  img
+    width 90%
+    margin auto

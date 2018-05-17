@@ -2,13 +2,29 @@
 @import '../variables.styl'
 
 #home
+  max-height 1080px
   margin-top 5vh
   text-align center
-  .fade-enter-active
-    transition opacity 3s
-  .fade-enter
-    opacity 0
+  font-family Muli
+  color dark-green
+  display grid
+  grid-template-rows 5fr 1fr 1fr
   img
     height 50vh
     width auto
     margin auto
+  h1
+    font-size 2rem
+  p
+    font-size 1.5rem
+  a
+    border 2px solid gray-font
+    border-radius 4px
+    margin 3rem auto
+    padding 2rem 3.5rem
+    color gray-font
+    font-size 1.3rem
+    text-decoration none
+    :hover
+      border-color soft-green
+      color soft-green

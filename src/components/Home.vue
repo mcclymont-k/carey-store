@@ -1,21 +1,22 @@
 <template>
   <div id="home">
-    <transition name='fade'>
-      <img v-if="show" src='../assets/SelfPortrait-01.png' />
-    </transition>
-    <ProductCategories />
+      <img src='../assets/SelfPortrait-01.png' />
+      <div>
+        <h1>Carey Dueweke</h1>
+        <p>Creativity ...by Design</p>
+      </div>
+      <div>
+        <router-link to='/product_categories' exact>View Collection</router-link>
+      </div>
   </div>
 </template>
 
 <script>
-import ProductCategories from './ProductCategories'
 export default {
   name: 'Home',
-  components: { ProductCategories },
   data () {
     return {
-      show: false,
-      msg: 'Welcome to Your Home Page'
+      show: false
     }
   },
 
