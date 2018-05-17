@@ -4,16 +4,24 @@
 @import './components/nav.styl'
 @import './components/productList.styl'
 
-body
-  box-sizing border-box
-  margin 0
-  padding 0
-
-li a
-  text-decoration none
-  list-style none
 
 #app
   min-height 100vh
   width 90%
   margin 0 auto
+  grid-template-rows auto 85% auto
+  grid-template-areas:
+  "header"\
+  "main"\
+  "footer"\
+
+body
+  box-sizing border-box
+  margin 0
+  padding 0
+
+#nav
+  grid-area header
+
+#footer
+  grid-area footer

@@ -45,7 +45,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.filterProducts()
-    }, 500)
+    }, 1500)
   },
 
   methods: {
