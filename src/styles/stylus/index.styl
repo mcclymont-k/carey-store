@@ -6,8 +6,12 @@
 
 
 #app
-  min-height 100vh
+  height 100%
   width 90%
+  position absolute
+  margin auto
+  left 0
+  right 0
   margin 0 auto
   grid-template-rows auto 85% auto
   grid-template-areas:
@@ -15,13 +19,20 @@
   "main"\
   "footer"\
 
+html
+  height 100%
+
 body
   box-sizing border-box
   margin 0
   padding 0
+  width: 100%
+  height: 100%
 
 #nav
-  grid-area header
+  position absolute
 
 #footer
-  grid-area footer
+  position fixed
+  bottom 0
+  background-color white
