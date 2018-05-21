@@ -12,6 +12,14 @@ const state = {
 }
 
 const actions = {
+  OPEN_CONTACT_MODAL_POPUP ({ commit }) {
+    commit('OPEN_CONTACT_MODAL')
+  },
+
+  CLOSE_CONTACT_MODAL_POPUP ({ commit }) {
+    commit('CLOSE_CONTACT_MODAL')
+  },
+
   LOAD_PRODUCTS ({ commit }) {
     axios.get(usersAPI).then((response) => {
       commit('SET_PRODUCTS', { products: response.data })

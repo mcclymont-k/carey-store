@@ -3,38 +3,127 @@
 
 #product-list
   display grid
-  max-width 1150px
-  margin 50px auto
   grid-template-columns 200px auto
   font-family Muli
   color gray-font
+  margin-top 4.5rem
   .fade-enter-active, .fade-leave-active
     transition opacity 2s
   .fade-enter, .fade-leave-to
     opacity 0
 
 #sidebar
+  ul
+    margin-top 2.5rem
+    position fixed
+    padding 0
+  ul li
+    list-style none
+    font-size 1.1rem
+    padding 0.8rem 0
   ul li a
     text-decoration none
-    list-style none
     cursor pointer
-    :hover
-      color dark-green
+  ul li a:hover
+    color darker-green
+
 
 .product-list-wrapper
   display grid
   grid-template-columns 1fr 1fr 1fr
-  grid-auto-rows 450px
+  grid-auto-rows auto
+  grid-gap 2rem
 
 .product-box
-  display grid
-  grid-template-rows 1fr 50px
-  border solid darker-green 2px
+  border solid darker-green 1px
+  border-radius 3px
   text-align center
-  align-items center
-  justify-items center
+  display flex
+  flex-direction column
   img
     width 90%
-    max-height 100%
-    object-fit cover
     margin auto
+  a
+    font-size 1.2 rem
+    font-weight bold
+    padding 1rem 0
+    text-decoration none
+    color gray-font
+    cursor pointer
+
+
+
+/**** Product Modal ****/
+
+#product-modal
+  position fixed
+  top 0
+  left 0
+  z-index 999
+  min-height 100vh
+  width 100%
+  background-color rgba(0,0,0,0.7)
+  box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .selected-product-box
+    background-color rgba(255,255,255, 1)
+    border-radius 5px
+    height 75%
+    width 60%
+    margin 5rem auto 0
+    color darker-green
+    font-family Muli
+    text-align center
+    display flex
+    flex-direction column
+
+    .fa-times
+      text-align right
+      cursor pointer
+      font-size 1.3rem
+      margin 1rem
+
+    .fa-times:hover
+      color gray-font
+
+    img
+      max-height 500px
+      width auto
+      margin auto
+
+    table
+      max-width 550px
+      margin auto
+
+    table tr
+      display flex
+
+    table tr td
+      list-style none
+      display flex
+      justify-content center
+      font-size 1.2rem
+      margin 0 0.5rem
+
+    table tr td button
+      cursor pointer
+      background-color #fff
+      color darker-green
+      border 1px solid darker-green
+      border-radius 3px
+      font-size 1.1rem
+      margin-left 1.5rem
+
+    table tr td button:hover
+      color #fff
+      background-color med-light-green
+      border 1px solid #fff
+      border none
+
+    table tr td button:focus, table tr td button:active
+      outline none
+
+    p
+      font-weight bold
+      color soft-green
+      margin 1.2rem auto
