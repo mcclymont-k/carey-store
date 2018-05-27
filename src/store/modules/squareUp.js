@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-let usersAPI = 'http://localhost:5000/items'
-let categoryAPI = 'http://localhost:5000/categoryList'
+let usersAPI = 'https://carey-store.herokuapp.com/items'
+let categoryAPI = 'https://carey-store.herokuapp.com/categoryList'
 
 const state = {
   contactModalOpen: false,

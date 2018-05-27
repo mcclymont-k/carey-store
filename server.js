@@ -11,6 +11,7 @@ app.use(serveStatic(__dirname + "/dist"))
 const defaultClient = SquareConnect.ApiClient.instance;
 let oauth2 = defaultClient.authentications['oauth2']
 oauth2.accessToken = process.env.SQUARE_UP_ACCESS_TOKEN
+console.log(process.env.SQUARE_UP_ACCESS_TOKEN)
 
 let locationsId = 1
 let itemList = {}
