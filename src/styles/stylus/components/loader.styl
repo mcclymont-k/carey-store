@@ -1,0 +1,71 @@
+// Styling for Animated Loader
+@import '../variables.styl'
+
+loader-circle-size = 1.8rem
+loader-width = 30em
+
+.loader-container
+  margin 25% 10% 0
+  display flex
+  justify-content center
+
+.loader-box
+  height loader-circle-size
+  width loader-width
+  margin auto 200px auto 0
+
+  .loader-circle
+    animation-name loader
+    animation-timing-function ease-in-out
+    animation-duration 4s
+    animation-iteration-count infinite
+    height loader-circle-size
+    width loader-circle-size
+    border-radius 100%
+    position absolute
+    border 2px solid white
+
+  .loader-circle:first-child
+      background-color darker-green
+      animation-delay 0.5s
+
+  .loader-circle:nth-child(2)
+      background-color dark-green
+      animation-delay 0.4s
+
+  .loader-circle:nth-child(3)
+      background-color soft-green
+      animation-delay 0.3s
+
+  .loader-circle:nth-child(4)
+      background-color med-light-green
+      animation-delay 0.2s
+
+  .loader-circle:nth-child(5)
+      background-color pale-green
+      animation-delay 0.1s
+
+  .loader-circle:nth-child(6)
+      background-color gray-font
+      animation-delay 0s
+
+@keyframes loader
+  15% {
+    transform: translateX(0);
+    border-radius: 50%;
+  }
+
+  45% {
+    transform: translateX( loader-width - loader-circle-size );
+    border-radius: 0%;
+  }
+
+  65% {
+    transform: translateX( loader-width - loader-circle-size );
+    border-radius: 0%;
+  }
+
+  95% {
+    transform: translateX(0);
+    border-radius: 50%;
+  }

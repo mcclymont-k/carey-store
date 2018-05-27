@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import About from '@/components/About'
+import Cart from '@/components/Cart'
 import Events from '@/components/Events'
 import Home from '@/components/Home'
 import ProductList from '@/components/ProductList'
@@ -20,6 +21,11 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     },
     {
       path: '/events',

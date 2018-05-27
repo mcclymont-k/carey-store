@@ -16,7 +16,8 @@
     </ul>
     <ul class='right'>
       <li>
-        <i class="fas fa-shopping-cart"></i>
+        <router-link :to="{ name: 'Cart' }"><i class="fas fa-shopping-cart"></i></router-link>
+        <button style='display: none; background-color: orange; position: absolute; top: 0; right: 0; border: none' v-on:click='goToCheckout()'>to checkout</button>
       </li>
     </ul>
   </nav>
@@ -41,6 +42,9 @@ export default {
     },
     handleClose () {
       this.$store.dispatch('CLOSE_CONTACT_MODAL')
+    },
+    goToCheckout() {
+      window.location.href = window.location.href + 'checkout'
     }
   }
 }

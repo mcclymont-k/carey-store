@@ -3,29 +3,39 @@
 
 #home
   max-height 1080px
-  height 100%
   text-align center
   font-family Muli
   color dark-green
-  display grid
-  grid-template-rows 60% 5% 5% 1fr
-  align-items center
   img
-    height 50vh
+    height 30rem
     width auto
     margin auto
   h1
-    font-size 2rem
+    font-size 1.8rem
   p
-    font-size 1.5rem
-  a
+    font-size 1.4rem
+
+  .link-wrapper
+    display flex
+    justify-content center
+    width fit-content
+    width -moz-fit-content
     border 2px solid gray-font
     border-radius 4px
     margin 3rem auto
-    padding 2rem 3.5rem
-    color gray-font
-    font-size 1.3rem
-    text-decoration none
-    :hover
-      border-color soft-green
+    a
+      color gray-font
+      font-size 1.2rem
+      text-decoration none
+      margin auto
+      padding 1rem 2rem
+
+  .link-wrapper:hover
+    border 2px solid soft-green
+    color soft-green
+    cursor pointer
+    .link-wrapper a
       color soft-green
+
+  .link-wrapper a:hover
+    color soft-green

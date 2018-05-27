@@ -1,6 +1,8 @@
 @import './variables.styl'
+@import './components/cart.styl'
 @import './components/footer.styl'
 @import './components/home.styl'
+@import './components/loader.styl'
 @import './components/nav.styl'
 @import './components/productList.styl'
 
@@ -13,26 +15,32 @@
   left 0
   right 0
   margin 0 auto
-  grid-template-rows auto 85% auto
-  grid-template-areas:
-  "header"\
-  "main"\
-  "footer"\
+  display grid
+  grid-template-rows 60px 1fr 60px
 
-html
+html, body
   height 100%
-
-body
-  box-sizing border-box
   margin 0
   padding 0
-  width: 100%
-  height: 100%
+
+hr
+  border-bottom 1px solid black
+  width 85%
+  margin auto
 
 #nav
   position absolute
+  grid-row 1
+
+.main
+  box-sizing border-box
+  margin 0
+  padding 0
+  width 100%
+  grid-row 2
 
 #footer
-  position fixed
-  bottom 0
   background-color white
+  grid-row 3
+  ul
+    padding 1rem 0 0.5rem

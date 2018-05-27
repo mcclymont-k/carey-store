@@ -1,10 +1,11 @@
 <template>
-  <div id="home">
+  <div id="home" class="main">
       <img src='../assets/SelfPortrait-01.png' />
-      <h1>Carey Dueweke</h1>
-      <p>Creativity ...by Design</p>
-      <button style='background-color: orange; position: absolute; top: 0; right: 0; border: none' v-on:click='goToCheckout()'>to checkout</button>
       <div>
+        <h1>Carey Dueweke</h1>
+        <p>Creativity ...by Design</p>
+      </div>
+      <div class="link-wrapper">
         <router-link to='/product_categories' exact>View Collection</router-link>
       </div>
   </div>
@@ -20,9 +21,7 @@ export default {
   },
 
   methods: {
-    goToCheckout() {
-      window.location.href = window.location.href + 'checkout'
-    }
+
   },
 
   mounted () {
