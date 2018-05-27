@@ -1,2 +1,80 @@
 // Styling for Cart
 @import '../variables.styl'
+
+#cart
+  font-family Muli
+  color soft-green
+  text-align center
+  display flex
+  flex-direction column
+  justify-content center
+
+  table
+    margin auto
+    border-collapse collapse
+    font-size 1.2 rem
+
+  table tr
+    border-bottom 1px solid soft-green
+
+  table tr td
+    text-align center
+    color gray-font
+
+  table tr td img
+    max-height 200px
+    padding 1.5rem 0
+
+  table .item_price
+    padding 0 4rem
+
+  table i
+    color #E82614
+    cursor pointer
+    padding 0 3rem
+
+  h3
+    color gray-font
+
+  button
+    cursor pointer
+    background-color #fff
+    color gray-font
+    border 1px solid gray-font
+    border-radius 3px
+    font-size 1.1rem
+    height 2rem
+    margin 2rem auto
+
+  button:hover
+    color #fff
+    color dark-green
+    border 1px solid dark-green
+
+  button:focus, button:active
+      outline none
+
+  .link-wrapper
+    display flex
+    justify-content center
+    width fit-content
+    width -moz-fit-content
+    border 2px solid gray-font
+    border-radius 4px
+    margin 4rem auto
+    a
+      color gray-font
+      font-size 1.2rem
+      text-decoration none
+      margin auto
+      padding 1rem 2rem
+
+  .link-wrapper:hover
+    border 2px solid soft-green
+    color soft-green
+    cursor pointer
+    .link-wrapper a
+      color soft-green
+
+  .link-wrapper a:hover
+    color soft-green

@@ -10,6 +10,7 @@
           </li>
         </ul>
       </div>
+      <Loader v-if="showLoaderAnimation"></Loader>
       <transition name='fade'>
         <div class='product-list-wrapper' v-if="show">
           <div class='product-box' v-for="product in filteredProducts">
@@ -18,7 +19,6 @@
           </div>
         </div>
       </transition>
-
     <div id="product-modal" v-if="showProductModal && productModalProduct">
       <div class="selected-product-box">
         <i class="fas fa-times" v-on:click="closeProductModal()"></i>
@@ -41,9 +41,11 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+import Loader from './Loader'
 
 export default {
   name: 'ProductList',
+  components: { Loader },
   computed: {
   ...mapGetters(['products', 'productCategories', 'cart'])
   },
@@ -53,6 +55,7 @@ export default {
       filteredProducts: {},
       show: false,
       showProductModal: false,
+      showLoaderAnimation: true,
       productModalProduct: null,
       message: ""
     }
@@ -66,7 +69,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.filterProducts()
-    }, 1500)
+    }, 3000)
   },
 
   methods: {
@@ -83,7 +86,8 @@ export default {
       setTimeout(() => {
         this.filteredProducts = filteredProductList
         this.show = true
-      }, 1000)
+        this.showLoaderAnimation = false
+      }, 2000)
     },
 
     setProductModalProduct(id) {
