@@ -2,8 +2,15 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-let usersAPI = 'https://carey-store.herokuapp.com/items'
-let categoryAPI = 'https://carey-store.herokuapp.com/categoryList'
+if (window.location.hostname == 'localhost') {
+  let usersAPI = 'https://localhost:5000/items'
+  let categoryAPI = 'https://localhost:5000/categoryList'
+  console.log('local')
+} else {
+  let usersAPI = 'https://carey-store.herokuapp.com/items'
+  let categoryAPI = 'https://carey-store.herokuapp.com/categoryList'
+  console.log('production')
+}
 
 const state = {
   cart: []

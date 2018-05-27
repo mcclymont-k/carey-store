@@ -2,9 +2,19 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-let usersAPI = 'https://carey-store.herokuapp.com/items'
-let categoryAPI = 'https://carey-store.herokuapp.com/categoryList'
+let usersAPI = ''
+let categoryAPI = ''
 
+if (window.location.hostname == 'localhost') {
+  console.log('local')
+  usersAPI = 'http://localhost:5000/items'
+  categoryAPI = 'http://localhost:5000/categoryList'
+} else {
+  console.log('production')
+  usersAPI = 'https://carey-store.herokuapp.com/items'
+  categoryAPI = 'https://carey-store.herokuapp.com/categoryList'
+}
+console.log(usersAPI)
 const state = {
   contactModalOpen: false,
   products: [],

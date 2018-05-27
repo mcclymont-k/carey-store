@@ -26,6 +26,7 @@ export default {
 
   mounted () {
     this.show = true
+    console.log(window.location)
   }
 }
 </script>
