@@ -16,11 +16,11 @@ let locationsId = 1
 let itemList = {}
 let categoryList = {}
 let fakeData = {
-  idempotency_key: '1w2ffgt5L',
+  idempotency_key: '1w2ff4ed5L',
   ask_for_shipping_address: true,
   merchant_support_email: 'mcclymont.kieran@gmail.com',
   order: {
-    reference_id: '1',
+    reference_id: '4',
     line_items: [
       {
         name: 'item1',
@@ -69,6 +69,7 @@ app.get('/checkout', (req, res) => {
   checkoutRequest.idempotency_key = fakeData.idempotency_key
   checkoutRequest.order = fakeData.order
   let apiInstance = new SquareConnect.CheckoutApi()
+  console.log(checkoutRequest)
   apiInstance.createCheckout(locationsId, checkoutRequest)
   .then(function(data) {
     let URL = data.checkout.checkout_page_url
